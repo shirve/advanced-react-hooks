@@ -13,6 +13,11 @@ const HomePage = () => {
           useRef example-2
         </li>
       </Link>
+      <Link to='memory-leak-example' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          memory leak example
+        </li>
+      </Link>
     </ul>
   )
 }
