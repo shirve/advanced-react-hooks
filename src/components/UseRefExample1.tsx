@@ -13,7 +13,9 @@ const UseRefExample1 = () => {
   }
 
   return (
-    <div className='w-25'>
+    <div className='w-50'>
+      <Link to='/'>Back to HomePage</Link>
+      <h1>Creating DOM Reference</h1>
       <form onSubmit={onSubmit}>
         <label htmlFor='name'>Name</label>
         <input
@@ -30,7 +32,6 @@ const UseRefExample1 = () => {
           Click here to focus on the input field
         </p>
       </form>
-      <Link to='/'>Back to HomePage</Link>
     </div>
   )
 }

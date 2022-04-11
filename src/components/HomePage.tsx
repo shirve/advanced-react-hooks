@@ -1,7 +1,20 @@
 import { Link } from 'react-router-dom'
 
 const HomePage = () => {
-  return <Link to='useref-example-1'>useRef example-1</Link>
+  return (
+    <ul className='list-group'>
+      <Link to='useref-example-1' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action '>
+          useRef example-1
+        </li>
+      </Link>
+      <Link to='useref-example-2' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          useRef example-2
+        </li>
+      </Link>
+    </ul>
+  )
 }
 
 export default HomePage
