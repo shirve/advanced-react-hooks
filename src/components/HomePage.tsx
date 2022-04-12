@@ -23,6 +23,11 @@ const HomePage = () => {
           useMemo example
         </li>
       </Link>
+      <Link to='usecallback-example' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          useCallback example
+        </li>
+      </Link>
     </ul>
   )
 }
