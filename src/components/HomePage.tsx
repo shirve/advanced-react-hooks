@@ -18,6 +18,11 @@ const HomePage = () => {
           memory leak example
         </li>
       </Link>
+      <Link to='usememo-example' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          useMemo example
+        </li>
+      </Link>
     </ul>
   )
 }
