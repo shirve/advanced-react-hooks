@@ -28,6 +28,11 @@ const HomePage = () => {
           useCallback example
         </li>
       </Link>
+      <Link to='custom-hook-example1' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          custom hook example 1
+        </li>
+      </Link>
     </ul>
   )
 }

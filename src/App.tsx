@@ -5,6 +5,7 @@ import UseRefExample2 from './components/UseRefExample2'
 import MemoryLeakExample from './components/MemoryLeakExample'
 import UseMemoExample from './components/UseMemoExample'
 import UseCallbackExample from './components/UseCallbackExample'
+import CustomHookExample1 from './components/CustomHookExample1'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='memory-leak-example' element={<MemoryLeakExample />} />
           <Route path='usememo-example' element={<UseMemoExample />} />
           <Route path='usecallback-example' element={<UseCallbackExample />} />
+          <Route path='custom-hook-example1' element={<CustomHookExample1 />} />
         </Routes>
       </main>
     </Router>
