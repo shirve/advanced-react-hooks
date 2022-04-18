@@ -38,6 +38,11 @@ const HomePage = () => {
           custom hook example 2
         </li>
       </Link>
+      <Link to='usecontext-example' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          useContext example
+        </li>
+      </Link>
     </ul>
   )
 }
