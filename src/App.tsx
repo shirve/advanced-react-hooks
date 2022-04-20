@@ -9,6 +9,7 @@ import CustomHookExample1 from './components/CustomHookExample1'
 import CustomHookExample2 from './components/CustomHookExample2'
 import UseContextExampleParent from './components/UseContextExampleParent'
 import { CustomContextProvider } from './context/CustomContext'
+import UseReducerExample from './components/UseReducerExample'
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
               path='usecontext-example'
               element={<UseContextExampleParent />}
             />
+            <Route path='usereducer-example' element={<UseReducerExample />} />
           </Routes>
         </main>
       </Router>

@@ -43,6 +43,11 @@ const HomePage = () => {
           useContext example
         </li>
       </Link>
+      <Link to='usereducer-example' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          useReducer example
+        </li>
+      </Link>
     </ul>
   )
 }
