@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import HomePage from './components/HomePage'
+import HomePage from './pages/HomePage'
 import UseRefExample1 from './components/UseRefExample1'
 import UseRefExample2 from './components/UseRefExample2'
 import MemoryLeakExample from './components/MemoryLeakExample'
@@ -10,6 +10,7 @@ import CustomHookExample2 from './components/CustomHookExample2'
 import UseContextExampleParent from './components/UseContextExampleParent'
 import { CustomContextProvider } from './context/CustomContext'
 import UseReducerExample from './components/UseReducerExample'
+import HighOrderComponentExample from './components/HighOrderComponentExample'
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
               element={<UseContextExampleParent />}
             />
             <Route path='usereducer-example' element={<UseReducerExample />} />
+            <Route path='hoc-example' element={<HighOrderComponentExample />} />
           </Routes>
         </main>
       </Router>

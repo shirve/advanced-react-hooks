@@ -48,6 +48,11 @@ const HomePage = () => {
           useReducer example
         </li>
       </Link>
+      <Link to='hoc-example' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          High Order Component example
+        </li>
+      </Link>
     </ul>
   )
 }
