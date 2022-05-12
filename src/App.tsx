@@ -11,6 +11,7 @@ import UseContextExampleParent from './components/UseContextExampleParent'
 import { CustomContextProvider } from './context/CustomContext'
 import UseReducerExample from './components/UseReducerExample'
 import HighOrderComponentExample from './components/HighOrderComponentExample'
+import ReduxCounterExample from './components/ReduxCounterExample'
 
 function App() {
   return (
@@ -41,6 +42,10 @@ function App() {
             />
             <Route path='usereducer-example' element={<UseReducerExample />} />
             <Route path='hoc-example' element={<HighOrderComponentExample />} />
+            <Route
+              path='redux-counter-example'
+              element={<ReduxCounterExample />}
+            />
           </Routes>
         </main>
       </Router>

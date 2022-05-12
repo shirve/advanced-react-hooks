@@ -53,6 +53,11 @@ const HomePage = () => {
           High Order Component example
         </li>
       </Link>
+      <Link to='redux-counter-example' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          Redux counter example
+        </li>
+      </Link>
     </ul>
   )
 }
