@@ -3,13 +3,15 @@ import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
 import App from './App'
+import { Provider } from 'react-redux'
+import { store } from './app/store'
 
-const rootElement = document.getElementById('root')
-if (!rootElement) throw new Error('Failed to find the root element')
-const root = ReactDOM.createRoot(rootElement)
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 )
