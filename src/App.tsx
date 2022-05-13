@@ -12,6 +12,9 @@ import { CustomContextProvider } from './context/CustomContext'
 import UseReducerExample from './components/UseReducerExample'
 import HighOrderComponentExample from './components/HighOrderComponentExample'
 import ReduxCounterExample from './components/ReduxCounterExample'
+import ProtectedRouteExample from './components/ProtectedRouteExample'
+import ProtectedRoute from './components/ProtectedRoute'
+import SignIn from './pages/SignIn'
 
 function App() {
   return (
@@ -20,6 +23,7 @@ function App() {
         <main className='container mt-5'>
           <Routes>
             <Route path='/' element={<HomePage />} />
+            <Route path='/signin' element={<SignIn />} />
             <Route path='useref-example-1' element={<UseRefExample1 />} />
             <Route path='useref-example-2' element={<UseRefExample2 />} />
             <Route path='memory-leak-example' element={<MemoryLeakExample />} />
@@ -46,6 +50,12 @@ function App() {
               path='redux-counter-example'
               element={<ReduxCounterExample />}
             />
+            <Route element={<ProtectedRoute />}>
+              <Route
+                path='protected-route-example'
+                element={<ProtectedRouteExample />}
+              />
+            </Route>
           </Routes>
         </main>
       </Router>

@@ -58,6 +58,11 @@ const HomePage = () => {
           Redux counter example
         </li>
       </Link>
+      <Link to='protected-route-example' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          Protected route example
+        </li>
+      </Link>
     </ul>
   )
 }
