@@ -63,6 +63,11 @@ const HomePage = () => {
           Protected route example
         </li>
       </Link>
+      <Link to='react-query-example' className='text-decoration-none'>
+        <li className='list-group-item list-group-item-action'>
+          react-query example
+        </li>
+      </Link>
     </ul>
   )
 }
