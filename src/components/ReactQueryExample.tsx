@@ -1,37 +1,31 @@
-import { useEffect, useState } from 'react'
-import { useQuery, useQueryClient } from 'react-query'
+import { useState } from 'react'
+import { QueryFunctionContext, useQuery } from 'react-query'
 import { Link } from 'react-router-dom'
 
-interface Character {
+interface CharacterViewModel {
   id: number
   name: string
 }
 
-const fetchCharacters = async (page: number) => {
+type CharactersQueryKey = [string, { page: number }]
+
+const fetchCharacters = async ({
+  queryKey,
+}: QueryFunctionContext<CharactersQueryKey>) => {
   const res = await fetch(
-    `https://rickandmortyapi.com/api/character?page=${page}`
+    `https://rickandmortyapi.com/api/character?page=${queryKey[1].page}`
   )
-  return await res.json()
+  return res.json()
 }
 
+const useGetCharacters = ({ page, ...options }: { page: number }) =>
+  useQuery(['characters', { page }], fetchCharacters, {
+    ...options,
+  })
+
 const ReactQueryExample = () => {
-  const client = useQueryClient()
   const [page, setPage] = useState(1)
-
-  const { status, data } = useQuery(
-    ['characters', page],
-    () => fetchCharacters(page),
-    { keepPreviousData: true, staleTime: 5000 }
-  )
-
-  // Prefetch next page
-  useEffect(() => {
-    if (data?.info.next) {
-      client.prefetchQuery(['characters', page + 1], () =>
-        fetchCharacters(page + 1)
-      )
-    }
-  }, [data, page, client])
+  const { status, data } = useGetCharacters({ page })
 
   return (
     <div className='w-50'>
@@ -40,7 +34,7 @@ const ReactQueryExample = () => {
       <h5>Rick & Morty characters</h5>
       {status === 'loading' && <span>Loading...</span>}
       {status === 'success' &&
-        data.results.map((character: Character) => (
+        data.results.map((character: CharacterViewModel) => (
           <li key={character.id}>{character.name}</li>
         ))}
       <button
