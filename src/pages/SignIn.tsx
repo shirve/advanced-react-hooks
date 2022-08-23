@@ -1,10 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { AppDispatch } from '../app/store'
+import { useAppDispatch } from '../app/store'
 import { signIn } from '../redux/userSlice'
 
 const SignIn = () => {
-  const dispatch = useDispatch<AppDispatch>()
+  const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
   const handleSignIn = () => {
